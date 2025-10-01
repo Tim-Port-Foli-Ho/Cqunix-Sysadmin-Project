@@ -1,0 +1,43 @@
+# option definitions common to all supported networks
+default-lease-time 600;
+max-lease-time 7200;
+
+# The ddns-updates-style parameter controls whether or not the server will
+# attempt to do a DNS update when a lease is confirmed. We default to the
+# behavior of the version 2 packages ('none', since DHCP v2 didn't
+# have support for DDNS.)
+ddns-update-style none;
+
+#DHCP configuration for 192.168.100.0/24 
+subnet 192.168.100.0 netmask 255.255.255.0 {
+  range 192.168.100.101 192.168.100.251;
+  option domain-name-servers 8.8.8.8, 8.8.4.4; 
+  option routers 192.168.100.1;
+  option broadcast-address 192.168.100.255;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+
+# Reservation for adelaide (Web server)
+host adelaide {
+  hardware ethernet 08:00:27:53:35:2a;  
+  fixed-address 192.168.100.100;         
+}
+
+# Reservation for sydney (SSH server)
+host sydney {
+  hardware ethernet 08:00:27:CF:C8:B6;  
+  fixed-address 192.168.100.50;          
+}
+
+# Reservation for bundaberg (Backup server)
+host bundaberg {
+  hardware ethernet 08:00:27:2a:3e:d0;  
+  fixed-address 192.168.100.20;          
+}
+
+# Reservation for gladstone (Git server)
+host gladstone {
+  hardware ethernet 08:00:27:28:b9:7c;  
+  fixed-address 192.168.100.12;          
+}

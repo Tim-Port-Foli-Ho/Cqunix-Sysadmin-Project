@@ -1,0 +1,30 @@
+<VirtualHost *:80>
+    ServerName docuwiki.cquinix
+    DocumentRoot /var/www/html/dokuwiki
+
+    <Directory /var/www/html/dokuwiki>
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    # Redirect HTTP to HTTPS
+    RewriteEngine On
+    RewriteCond %{SERVER_NAME} =docuwiki.cquinix
+    RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,QSA,R=permanent]
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName docuwiki.cquinix
+    DocumentRoot /var/www/html/dokuwiki
+
+    <Directory /var/www/html/dokuwiki>
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certs/docuwiki.crt
+    SSLCertificateKeyFile /etc/ssl/private/docuwiki.key
+</VirtualHost>
