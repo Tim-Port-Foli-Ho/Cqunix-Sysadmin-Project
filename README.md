@@ -12,13 +12,14 @@ This project documents the design, implementation and testing of an network and 
 ## Scope
 - The project covers design, implementation, configuration and testing of the six dedicated servers
 - Meeting minutes are recorded
-- Network design including network diagram and justification
+- Network design including network diagram, table of servers, network justification and testing
 - Security configuration such as firewall rules, SSH auditing log, and password policies are documented
-- Backup strategy is documented, a backup instruction is created, and backup and recovery automation is tested
-- Device implementation are out of the scope.
+- Backup strategy is documented, a backup instruction is created
+- Manual backup recovery is tested
+- Device implementation such as laptops and workstations are out of the scope.
 
 ## Assumptions
-- Basic Linux system and network administation skills 
+- Basic Linux system and network administration skills 
 - Network devices other than servers are assumed but not implemented
 - All servers are on a single subnet and VLAN segmentation for a project this size is not needed
 
@@ -27,10 +28,11 @@ During this project, I was mainly responsible for managing the Gladstone Git ser
 
 Some of the key things I learned include:
 - Collaborating in a team setting with miniumal members require great and transparent communication to get the project completed.
-- Configuring a secure web application with a self assigned certificate for encryption
+- Configuring a secure web application and certificate management 
 - Implementing automated 3-2-1 backup strategy for an effective recover point objective with cron jobs and backup scripts
+- Configuring a robust password policy
 - Enable SSH connection to github repository
 
 Challenges:
-- Having members not communicate and drop out thus making this a project with two members
+- Having members not communicate and dropping out thus negatively impacting project deliver
 - Working remotely on this project, required additional time management to communicate with other member
