@@ -36,3 +36,13 @@ Some of the key things I learned include:
 Challenges:
 - Having members not communicate and dropping out thus negatively impacting project deliver
 - Working remotely on this project, required additional time management to communicate with other member
+
+## Relevant SFIA Skills
+IT Infrastructure (ITCO): Planning, installing, and configuring infrastructure server roles including DHCP, web, SSH, Git servers, backup solutions, and firewall systems.
+Systems Installation/Decommissioning (SINT): System installation and configuration of Ubuntu Linux servers in an internal network with virtual machines.
+Service Support (SUPP): Managing secure SSH access, auditing login attempts, and enforcing password policies.
+Backup and Recovery (BURM): Designing and automating backup strategies (3-2-1 rule), creating scripts, scheduling backup jobs, and validating recovery procedures.
+Release and Deployment (RELM): Automating deployment and synchronization of documentation sites and Git repositories.
+Information Security (SCTY): Implementing firewall rules, SSL/HTTPS, SSH hardening, and fail2ban for protecting infrastructure.
+Operations Management (ITOP): Monitoring system health, verifying network connectivity, and managing scheduled jobs using Cron.
+Problem Management (PBMG): Documenting troubleshooting and recovery procedures for service continuity.
